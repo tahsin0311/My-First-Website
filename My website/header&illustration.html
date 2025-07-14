@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container navbar-container">
+      <a class="navbar-brand" href="#">Tahsin</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="Form/contact-page.html">Login</a>
+          <a class="nav-link" href="pricing.html">Pricing</a>
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Slider Section -->
+  <div class="slider-container">
+    <button class="button1" onclick="prevImage()">Previous</button>
+    <img id="slider" src="Image slider/tahsin1.jpg" alt="Slider Image" />
+    <button class="button2" onclick="nextImage()">Next</button>
+  </div>
+
+  <!-- Main Features Section -->
+  <section>
+    <main class="container mt-5">
+      <div class="row">
+        <!-- Image -->
+        <div class="col-md-6">
+          <img src="image1.jpg" class="illustrator-image" alt="image" />
+        </div>
+
+        <!-- Text -->
+        <div class="col-md-6">
+          <h5 class="text-success">Core Features</h5>
+          <h2>Built & optimized with modern web development tools</h2>
+
+          <div class="row mt-5">
+            <!-- Feature 1 -->
+            <div class="col-4 d-flex align-items-center justify-content-center">
+              <img src="fast.png" style="width: 50px;" />
+            </div>
+            <div class="col-8">
+              <h3>Fast Development</h3>
+              <p><b>Rapid Deployment:</b> Delivering high-quality websites with speed and precision using the latest technologies.</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="col-4 d-flex align-items-center justify-content-center mt-4">
+              <img src="ui-ux.png" style="width: 50px;" />
+            </div>
+            <div class="col-8 mt-4">
+              <h3>UI/UX Design</h3>
+              <p><b>Interactive Prototyping:</b> Crafting user-friendly and visually engaging interfaces tailored to client needs.</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="col-4 d-flex align-items-center justify-content-center mt-4">
+              <img src="responsive.png" style="width: 50px;" />
+            </div>
+            <div class="col-8 mt-4">
+              <h3>Responsive Design</h3>
+              <p><b>Cross-Platform Compatibility:</b> Building websites that look great and perform well on all devices and browsers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Slider Script -->
+  <script>
+    let images = [
+      "Image slider/tahsin1.jpg",
+      "Image slider/tahsin2.jpg",
+      "Image slider/tahsin3.jpg"
+    ];
+    let index = 0;
+
+    function showImage() {
+      document.getElementById("slider").src = images[index];
+    }
+
+    function nextImage() {
+      index = (index + 1) % images.length;
+      showImage();
+    }
+
+    function prevImage() {
+      index = (index - 1 + images.length) % images.length;
+      showImage();
+    }
+
+    setInterval(nextImage, 3000);
+  </script>
+</body>
+</html>

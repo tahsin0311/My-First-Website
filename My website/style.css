@@ -1,0 +1,175 @@
+/* Navbar */
+.navbar-container {
+  background-color: #0758cb;
+}
+
+.navbar-container .navbar-brand,
+.navbar-container .nav-link {
+  color: white !important;
+}
+
+.navbar-container .navbar-brand:hover,
+.navbar-container .nav-link:hover {
+  color: #e0e0e0 !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Slider */
+.slider-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 30px auto 0 auto;
+  text-align: center;
+}
+
+#slider {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 15px 0;
+}
+
+.button1,
+.button2 {
+  padding: 8px 16px;
+  margin: 5px;
+  border: none;
+  background-color: #001e8a;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button1:hover,
+.button2:hover {
+  background-color: #186ac2;
+}
+
+/* Features */
+.illustrator-image {
+  width: 100%;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+
+/* Welcome page */
+body {
+  background-color: #c9f7ff;
+}
+
+.emoji-bg {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.3;
+  pointer-events: none;
+  animation: float 10s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* ===== Pricing Page Styles ===== */
+.pricing-section {
+  background-color: #f8f9fa;
+}
+
+.pricing-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-width: 2px;
+  border-radius: 12px;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-price {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.pricing-section h2 {
+  font-weight: 600;
+}
+
+.pricing-section .btn {
+  font-weight: 500;
+}
+
+/* === Login Page Style === */
+.login-body {
+  background-color: #c9f7ff;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+.login-body .emoji-bg {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.3;
+  pointer-events: none;
+  animation: float 10s infinite ease-in-out;
+}
+
+.login-body form {
+  background-color: #c9f7ff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-body input {
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.login-body button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #001e8a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.login-body button:hover {
+  background-color: #c9f7ff;
+}
+
+/* === Contact Page Style === */
+.contact-body {
+  background-color: #c9f7ff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}

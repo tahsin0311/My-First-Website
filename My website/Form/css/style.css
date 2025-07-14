@@ -1,0 +1,10 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.contact-section{
+    padding-top: 80px; 
+    padding-bottom: 80px;
+    background: #d4ddeb;
+}

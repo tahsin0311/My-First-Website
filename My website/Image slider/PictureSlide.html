@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Picture Slide</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fce4ec;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      background-color: white;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      max-width: 360px;
+    }
+
+    #slider {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin: 15px 0;
+    }
+
+    .button1, .button2 {
+      padding: 8px 16px;
+      margin: 5px;
+      border: none;
+      background-color: #e91e63;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button1:hover, .button2:hover {
+      background-color: #c2185b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="button1" onclick="prevImage()">Previous</button>
+    <img id="slider" src="nature3.jpg" alt="Slider Image">
+    <button class="button2" onclick="nextImage()">Next</button>
+  </div>
+
+  <script>
+    let images = [
+      "nature1.jpg", "nature2.jpg", "nature3.jpg", "nature4.jpg",
+      "nature5.jpg", "nature6.jpg", "nature7.jpg", "nature8.jpg", "nature9.jpg"
+    ];
+    let index = 0;
+
+    function showImage() {
+      document.getElementById("slider").src = images[index];
+    }
+
+    function nextImage() {
+      index = (index + 1) % images.length;
+      showImage();
+    }
+
+    function prevImage() {
+      index = (index - 1 + images.length) % images.length;
+      showImage();
+    }
+
+    setInterval(nextImage, 3000); // auto-slide every 3 seconds
+  </script>
+</body>
+</html>

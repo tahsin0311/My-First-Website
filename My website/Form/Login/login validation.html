@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Override or add styles directly here */
+    body.login-body {
+      background-color: #c9f7ff;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      font-family: Arial, sans-serif;
+    }
+
+    .login-container form {
+      background-color: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .login-container input {
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+
+    .login-container button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #001e8a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .login-container button:hover {
+      background-color: #0758cb;
+    }
+  </style>
+</head>
+<body class="login-body">
+  
+  <div class="login-container">
+    <form onsubmit="event.preventDefault(); handleSubmit();">
+      <h2>🔐 LogIn Now </h2>
+      <label for="userName">User Name:</label><br>
+      <input type="text" name="UserName" id="userName"><br><br>
+
+      <label for="password">Password:</label><br>
+      <input type="password" name="password" id="password"><br><br>
+
+      <button type="submit">LogIn</button>
+    </form>
+  </div>
+
+  <script>
+    function handleSubmit() {
+      var name = "Tahsin";
+      var password = "123";
+
+      var userName = document.getElementById("userName").value;
+      var userPass = document.getElementById("password").value;
+
+      if (userName.trim() === "") {
+        alert("Please enter user name");
+      } else if (userName === name && userPass === password) {
+        alert("Login successful. Welcome!");
+        window.location.href = "homepage.html";
+      } else {
+        alert("Wrong username or password");
+      }
+    }
+  </script>
+</body>
+</html>
